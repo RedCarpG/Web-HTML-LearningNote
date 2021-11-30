@@ -1,4 +1,5 @@
-# Tutorial
+# web_frontend-learning_guide
+A self learning guide for web development
 
 ## · HTML
 
@@ -19,3 +20,4 @@
 [JavaScript Tutorial - RUNOOB (CN)](https://www.runoob.com/js/js-tutorial.html)
 
 [JavaScript Reference - RUNOOB (CN)](https://www.runoob.com/jsref/jsref-tutorial.html)
+
