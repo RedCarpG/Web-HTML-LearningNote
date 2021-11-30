@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!-- Manifest file defines which files to be cached -->
+<html manifest="tutorial_manifest.appcache">
+
+
+<!-- <html></html> for entire HTML structure -->
+<html>
+
+    <!-- <head></head> for Head structure of html -->
+    <head>
+        
+        <!-- <title></title> for page Title -->
+        <title> HTML Guide </title>
+        
+        <!-- <base></base> for setting Base reference link address -->
+        <base href="." target="_blank" />
+        
+        <!-- <meta /> for Meta information -->
+        <meta charset="utf-8" />
+        <meta name="description" content="A HTML Tutorial" />
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript" /> <!-- Key words for seaching engines -->
+        <meta http-equiv="refresh" content="30" />      <!-- Refresh the page every 30 seconds-->
+        <meta name="viewport" content="width=device-width, 
+                                       initial-scale=1.0, 
+                                       maximum-scale=1.0, 
+                                       user-scalable=0" /> <!-- Layout viewport for mobile browser -->
+        <meta name="author" content="RedCarpG" />
+
+        <!-- <link /> for Link information -->
+        <link rel="stylesheet" type="text/css" href="tutorial_css.css" />
+        <link rel="stylesheet" type="text/css" href="aside_nav.css" />
+
+        <!-- <style></style> for adding Style -->
+        <style type="text/css"> </style>
+
+        <!-- <script></script> for adding JavaScript code -->
+        <script src="tutorial_js.js"> </script> 
+        <script src="aside_nav.js" defer="defer"> </script> 
+        <!-- <noscript></noscript> is used for browsers which does not support JavaScript code -->
+        <noscript>Sorry the browser does not support JS </noscript>
+
+    </head>
+
+    <!-- <body></body> for Main Body structure to be seen -->
+    <body>
+        
+        <!-- Header -->
+        <header>
+            <h1> HTML Guide Book </h1>
+        </header>
+
+        <!-- Main body -->
+        <article>
+
+            <!-- HTML Elements: -->
+            <h2> HTML Elements </h2>
+            
+            <!-- <div></div> makes a div block of group of elements -->
+            <div>
+
+                <!-- Titles : <h1></h1> <h2></h2> <h3></h3> ... <h6></h6>
+                -->
+                <h3> Title </h3>
+                <div class="example">
+                    <h1 class="example"> Title: &lt;h1&gt;&lt;/h1&gt; defines a first title </h1>
+                    <h2 class="example"> Title2: &lt;h2&gt;&lt;/h2&gt; defines a second title </h2>
+                    <h3 class="example"> Title3: &lt;h3&gt;&lt;/h3&gt; defines a third title </h3>
+                    <h4 class="example"> Title4: &lt;h4&gt;&lt;/h4&gt; defines a forth title </h4>
+                    <h5 class="example"> Title5: &lt;h5&gt;&lt;/h5&gt; defines a fifth title </h5>
+                    <h6 class="example"> Title6: &lt;h6&gt;&lt;/h6&gt; defines a sixth title </h6>
+                </div>
+
+                <!-- Paragraph : <p></p>
+                -->
+                <h3> Paragraph </h3>
+                <div class="example">
+                    <p class="example">  Paragraph: &lt;p&gt; &lt;/p&gt; defines a paragraph </p>
+                </div>
+                
+                <!-- Anchor(link) : <a></a>
+                -->
+                <h3> Anchor(Link) </h3>
+                <div class="example">
+                    <a href="url"> Link: This is a link </a> <br/>
+                    <a href="url" target="_blank"> Set target="_blank" </a> <br/>
+                </div>
+
+                <!-- Break : <br /> 
+                -->
+                <h3> Break </h3>
+                <div class="example">
+                    <br/>        <br/>        <br/>
+                </div>
+
+                <!-- Image : <img />
+                -->
+                <h3> Image </h3>
+                <div class="example">
+                    <img loading='lazy' src="data/example_pic.jpg" 
+                        width="60" height="60" 
+                        alt="This is a picture"
+                        class="example" />
+                </div>
+
+                <!-- Table : <table></table>
+                -->
+                <h3> Table </h3>
+                <div class="example">
+                    <table border="1" cellpadding="10" cellspacing="5">
+                        <caption> This is a Caption </caption>
+                        <tr>
+                            <th> Head 1</th>
+                            <th> Head 2</th>
+                            <th> Head 3</th>
+                        </tr>
+                        <tr>
+                            <td> Row 1, cell 1</td>
+                            <td> Row 1, cell 2</td>
+                            <td rowspan="2"> Row 1, rawspan=2</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Row 2 colspan=2</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <!-- List : <ui></ui> or <ol></ol>  
+                    <li></li> 
+                -->
+                <h3> List </h3>
+                <div class="example">
+                    <ul>
+                        <li> First list </li>
+                        <li> Second list </li>
+                        <li> Third list </li>
+                    </ul>
+                    <ol>
+                        <li> First list </li>
+                        <li> Second list </li>
+                        <li> Third list </li>
+                    </ol>
+                </div>
+                
+                <!-- Form : <form></from>
+                    <input />
+                -->
+                <h3> Form </h3>
+                <div class="example">
+                    <form action="tutorial_php.php" method="get">
+
+                        <!-- <fieldset></fieldset> tag for a fieldset in form -->
+                        <fieldset>
+                        <!-- <legend></legend> tag a fieldset legend -->
+                        <legend>This is a legend of a fieldset </legend>
+                        </fieldset> 
+                        <!-- <input /> tag can be used for interaction with user -->
+                        <!-- text input -->
+                        Input Text  : <input type="text" name="input_text" value="Text your input"> <br/>
+                        <!-- password input -->
+                        Input Password    : <input type="password" name="input_password"> <br/>
+                        <!-- ratio input -->
+                        <input type="radio" name="input_ratio" value="ratio_1" checked="checked">Ratio 1 <input type="radio" name="input_ratio" value="ratio_2">Ratio 2<br/>
+                        <!-- checkbox input -->
+                        <input type="checkbox" name="checkbox[]" value="check_1" checked="checked">Checkbox 1 
+                        <input type="checkbox" name="checkbox[]" value="check_2">Checkbox 2 
+                        <input type="checkbox" name="checkbox[]" value="check_3">Checkbox 3
+                        <br/>                   
+                        <!-- button input -->
+                        <input type="button" value="This is a button"> <br/>
+                        <!-- submit input -->
+                        <input type="submit" value="submit"> <br/>
+                        <!-- reset input -->
+                        <input type="reset" value="reset"> <br/>
+
+                        <!-- <label></label> for a label tag, use "for" to bind a "id"  -->
+                        <label for="label1">Label 1</label> <input type="checkbox" id="label1"><br/>
+                        
+                        <!-- <select></select> tag for dropdown list -->
+                        <!-- <option></option> tag for options in a dropdown list -->
+                        <select name="selection">
+                            <option value="option_1">Option 1</option>
+                            <option value="option_2">Option 2</option>
+                            <option value="option_3" selected="selected">Option 3</option>
+                        </select> <br/>
+
+                        <!-- <textarea></textarea> tag for a text area -->
+                        <textarea name="textarea" cols="30" rows="10">Here is a text area.</textarea>
+
+                    </form>
+                </div>
+
+                <!-- Inner Frame : <iframe></iframe>
+                -->
+                <h3> Inner Frame </h3>
+                <div class="example">
+                    <iframe src="data/example.html" name="iframe_0"></iframe>
+                    <p> <a href="https://www.runoob.com" target="iframe_0"> RUNOOB.COM </a> </p>
+                </div>
+
+                <!-- Span : <span></span> 
+                    seperates a elements in the text
+                -->
+                <h3> Span </h3>
+                <div class="example">
+                    <p> This is a line which includes a <span style="color: aqua;">span</span> text </p>
+                </div>
+                
+                <!-- Horizontal line : <hr />
+                -->
+                <h3> Split line </h3>
+                <div class="example">
+                    <hr /> 
+                </div>
+
+            </div>
+
+            <!-- HTML5 Elements: -->
+            <h2> HTML5 Elements </h2>
+            <div id="div_html5_elements">
+
+                <!-- Video player : <video></video> 
+                -->
+                <h3> Video Player </h3>
+                <div class="example">
+                    <video id="example_video" width="320" height="240" controls="controls">
+                        <!-- <source /> to add source -->
+                        <source src="data/example_video.mp4" type="video/mp4" />
+                        <source src="data/example_video.ogg" type="video/ogg" />
+                        <object data="data/example_video.mp4" width="320" height="240">
+                            <embed src="data/example_video.swf" width="320" height="240">
+                        </object>
+                        Your browser does not support video
+                    </video>
+                    <button onclick="video_playPause()">Play/Pause</button> <br/>
+                </div>
+
+                <!-- Audio player : <audio></audio> 
+                -->
+                <h3> Audio Player </h3>
+                <div class="example">
+                    <audio controls="controls">
+                        <source src="data/example_audio.wav" type="audio/wav">
+                        <source src="data/example_audio.ogg" type="audio/ogg">
+                        <source src="data/example_audio.mp3" type="audio/mpeg">
+                        Your browser does not support audio
+                    </audio>
+                </div>
+
+                <!-- Canvas : <canvas></canvas> 
+                    with JS
+                -->
+                <h3> Canvas </h3>
+                <div class="example">
+                    <button onclick="canvas_draw()">Draw</button> <br/>
+                    <canvas id="example_canvas" height="100" width="200" style="border:1px solid #000000;"> 
+                        Your browser does not support Canvas 
+                    </canvas>
+                </div>
+
+                <!-- SVG : <svg></svg> 
+                -->
+                <h3> SVG </h3>
+                <div class="example">
+                    <svg xmlns="https://www.w3.org/2000/svg" version="1.1" height="190">
+                        <polygon points="100,10 40,180 190,60 10,60 160,180" 
+                        style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+                    </svg> <br/>
+                </div>
+
+                <!-- MathML : <math></math>
+                -->
+                <h3> MathML </h3>
+                <div class="example">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    
+                        <mrow>
+                        <mi>A</mi>
+                        <mo>=</mo>
+                                    
+                        <mfenced open="[" close="]">
+                                    
+                            <mtable>
+                                <mtr>
+                                    <mtd><mi>x</mi></mtd>
+                                    <mtd><mi>y</mi></mtd>
+                                </mtr>
+                                                    
+                                <mtr>
+                                    <mtd><mi>z</mi></mtd>
+                                    <mtd><mi>w</mi></mtd>
+                                </mtr>
+                            </mtable>
+                            
+                        </mfenced>
+                        </mrow>
+                    </math> <br/>
+
+                </div>
+
+                <!-- Drag and drop a picture 
+                -->
+                <h3> Drag and drop a picture  </h3>
+                <div class="example">
+                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;"></div> <br>
+                    <img id="drag1" src="data/example_pic.jpg" draggable="true" ondragstart="drag(event)" width="30" height="30">
+                    <br/>
+                </div>
+
+                <!-- Get location 
+                    getLocation()
+                    with google map API
+                -->
+                <h3> Get location </h3>
+                <div class="example">
+                    <button onclick="getLocation()">Get Location</button>
+                    <div id="get_location_text" style="border-width: 2px; border: #000000; width:200px;height:100px"></div>
+                    <div id="get_location_mapholder" style="border-width: 2px; border: #000000; width:200px;height:100px"></div>
+                
+                    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+
+                </div>  
+
+                <!-- New Forms elements 
+                    new inputs
+                    <datalist></datalist> <keygen></keygen> <output></output>
+                -->
+                <h3> New Form elements </h3>
+                <div class="example">
+
+                    <!-- New Inputs -->
+                    <form action="">
+                        <!-- Color Input -->
+                        Choose a color: <input type="color" name="color_input"> <br/>
+                                        
+                        <!-- Date & Time Input -->
+                        Choose a date + time: <input type="datetime-local" name="daytime_input"> <br/>
+                        Choose a date: <input type="date" name="date_input"> <br/>
+                        Choose month & year: <input type="month" name="bdaymonth"> <br/>
+                        Choose week: <input type="week" name="week_year"> <br/>
+                        Choose time: <input type="time" name="usr_time"> <br/>
+        
+                        <!-- Email Input -->
+                        Add E-mail: <input type="email" name="email_input"> <br/>
+                        <!-- Phone Input -->
+                        Add phone: <input type="tel" name="tel_input"> <br/>
+                        <!-- URL Input -->
+                        Add url: <input type="url" name="pageurl"> <br/>
+        
+                        <!-- Number Input -->
+                        Choose a Number: <input type="number" name="quantity" min="1" max="5"> <br/>
+        
+                        <!-- Range Input -->
+                        Set a range <input type="range" name="points" min="1" max="10" value="5", step="0.1"> <br/>
+        
+                        <!-- Search Input -->
+                        Search Google: <input type="search" name="googlesearch"> <br/>
+        
+                    </form>
+        
+                    <!-- Datalist -->
+                    <form action="" method="get">
+                        <input list="browsers" name="browser">
+                        <datalist id="browsers">
+                        <option value="Internet Explorer">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                        </datalist>
+                        <input type="submit">
+                    </form>
+
+                    <!-- Keygen -->
+                    <form action="" method="get">
+                        Username: <input type="text" name="usr_name">
+                        Encrypt: <keygen name="security">
+                        <input type="submit">
+                    </form>
+
+                    <!-- Output -->
+                    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                        0 <input type="range" id="a" value="50"> 100 + <input type="number" id="b" value="50"> = 
+                        <output name="x" for="a b">100</output>
+                    </form>
+        
+                </div>
+
+                <!-- Ruby tag : <ruby></ruby>
+                    <rp></rp> : annotation on browser which does not support ruby
+                    <rt></rt> : pronunciation tag
+                -->
+                <h3> Ruby </h3>
+                <div class="example">
+                    <ruby>
+                        漢 <rp>(</rp><rt>han</rt><rp>)</rp>
+                        字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+                    </ruby>
+                </div>
+                
+                <!-- Time : <time></time> 
+                -->
+                <h3> Time </h3>
+                <div class="example">
+                    <p>We are open at <time>9:00</time> every day.</p> 
+                    <p>I have a date on <time datetime="2016-02-14">Valentine's day</time>.</p>
+
+                </div>
+
+                <!-- Details : <details></details> 
+                    <summary></summary>
+                -->
+                <h3> Details </h3>
+                <div class="example">
+                    <details>
+                        <summary>Copyright 1999-2011.</summary>
+                        <p> - by Refsnes Data. All Rights Reserved.</p>
+                        <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+                    </details>
+                </div>
+
+                <!-- Other 
+                    <meter></meter> for Meter bar 
+                    <progress></progress> for Progress bar
+                -->
+                <h3> Other </h3>
+                <div class="example">
+                    <meter class="example" value="2" min="0" max="10">2 out of 10</meter> <br/>
+                    <meter class="example" value="0.6">60%</meter> <br/>
+                    <progress class="example" value="22" max="100"> </progress> <br/>
+                </div>
+
+                <!-- Web Storages 
+                    see JS
+                -->
+                <h3> Web Storages </h3>
+                <div class="example">
+                    <!-- localStorage / sessionStorage -->
+                    <input type="text" id="store_text_key" name="store_text_key" class="text" value="Key"/>  
+                    <input type="text" id="store_text_value" name="store_text_value" class="text" value="Value"/>  
+                    <button id="store_button" onclick="click_store()">Store</button> <br/>
+                    
+                    <input type="text" id="get_text_key" name="get_text" class="text" value="Key"/>  
+                    <label id="get_text_value"> Value </label>  
+                    <button id="get_button" onclick="click_get()">Get</button> <br/>
+                </div>
+
+                <!-- Workers
+                    see JS
+                -->
+                <h3> Workers </h3>
+                <div class="example">
+                    <p>Start count <output id="worker_result"></output></p>
+                    <button onclick="workerStart()">Start Worker</button> 
+                    <button onclick="workerStop()">Stop Worker</button>
+                </div>
+
+                <!-- SSE 
+                -->
+                <h3> SSE </h3>
+                <div class="example">
+                    <p>Get Server sent event</p>
+                    <div id="sse_result"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Formats: -->
+            <div class="formats">
+                <details>
+                <summary class="example_title">Formats</summary>
+                    <ul class="example">
+                        <!-- <b></b> or <strong></strong> for Bold -->
+                        <li> 
+                            This is <b> Bold </b> <br/> 
+                            This is <strong> Strong </strong>
+                        </li>
+
+                        <!-- <big></big> for Big -->
+                        <li> This is <big> Big </big> </li>
+                        <!-- <small></small> for Small -->
+                        <li> This is <small> Small </small> </li>
+                        <!-- <u></u> for Underline -->
+                        <li> This is <u> Underline </u> </li>
+                        <!-- <ins></ins> for Insert format -->
+                        <li> This is <ins> Insert </ins> format </li>
+
+                        <!-- <i></i> or <em></em> for Emphasize -->
+                        <li>
+                            This is <i> Emphasize </i> <br/>
+                            This is <em> Emphasize </em> 
+                        </li>
+
+                        <!-- <sub></sub> <sup></sup> for Sub and Sup -->
+                        <li>
+                            This is <sup> Sup </sup> format <br/>
+                            This is <sub> Sub </sub> format 
+                        </li>
+                        
+                        
+                        <!-- <del></del> for Deleted format -->
+                        <li> This is <del> Deleted </del> format </li>
+                        
+                        <!-- <code></code> for Code format -->
+                        <li> This is <code> Code </code> </li>
+
+                        <!-- <kbd></kbd> for Keyboard format -->
+                        <li> This is <kbd> Keyboard </kbd> </li>
+
+                        <!-- <abbr></abbr> for Abbreviation format -->
+                        <li> This is <abbr title="abbr"> ABBR </abbr> format </li>
+
+                        <!-- <address></address> for Abbr format -->
+                        <li> This is <address> Address </address> format </li>
+
+                        <!-- <pre></pre> for Preformat format -->
+                        <li> This is <pre> Preformat </pre> </li>
+
+                        <!-- <blockquote></blockquote> for Blockquote format -->
+                        <li> This is <blockquote> Blockquote </blockquote> format </li>
+                        
+                    </ul>
+                </details>
+        
+            </div>
+
+            <!-- Entities: -->
+            <div class="entities">
+                <details>
+                <summary class="example_title">Entities</summary>
+                    <ul class="example">
+                        <li> &lt; </li>
+                        <li> &gt; </li>
+                        <li> &#169; </li>
+                    </ul>
+                </details>
+
+            </div>
+        </article>
+        
+        <!-- Side navigator -->
+        <aside class="aside"> 
+            <!-- Side Title -->
+            <div class="aside_title">
+                Menu   
+            </div>
+            
+            <!-- Side List --> 
+            <ul class="aside_list">
+                <li class="aside_list_item">
+                    <div class="parent_nav">
+                        <i></i>
+                        <span> HTML Elements </span> 
+                        <i> > </i>
+                    </div>  
+                    <ul class="child_nav">
+                        <li> <a href=""> · Title</a> </li>
+                        <li> <a href=""> · Paragraph</a> </li>
+                        <li> <a href=""> · Archor </a> </li>
+                        <li> <a href=""> · Break </a> </li> 
+                        <li> <a href=""> · Image </a> </li> 
+                        <li> <a href=""> · Table </a> </li> 
+                        <li> <a href=""> · List </a> </li> 
+                        <li> <a href=""> · Form </a> </li> 
+                        <li> <a href=""> · Inner Frame </a> </li> 
+                        <li> <a href=""> · Span </a> </li> 
+                        <li> <a href=""> · Split Line </a> </li> 
+                    </ul> 
+                </li>
+                <li class="aside_list_item">
+                    <div class="parent_nav">
+                        <i></i>
+                        <span> HTML5 Elements </span> 
+                        <i> > </i>
+                    </div>
+                    <ul class="child_nav">
+                        <li> <a href=""> · Title</a> </li>
+                        <li> <a href=""> · Paragraph</a> </li>
+                        <li> <a href=""> · Archor </a> </li>
+                        <li> <a href=""> · Break </a> </li> 
+                    </ul>
+                </li>
+            </ul>
+                
+        </aside>
+    </body>
+
+</html>
