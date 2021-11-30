@@ -1,0 +1,77 @@
+
+/* Side navigator title */
+aside .aside_title {
+    height: 70px;
+    font-size: 24px;
+    line-height: 70px;
+    text-align: center;
+    background-color: #111;
+    border-bottom: 3px solid #222;
+}
+
+/* Side navigator list */
+aside .aside_list, aside .aside_list .child_nav {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* Side navigator active lists */
+aside .aside_list .active .parent_nav {
+    background-color: #333;
+}
+aside .aside_list .active .child_nav {
+    display: block;
+}
+
+
+/* Side navigator list parent lists*/
+aside .aside_list .parent_nav {
+    height: 70px;
+    padding: 0 16px;
+    font-size: 20px;
+    line-height: 70px;
+    border-bottom: 1px solid #111;
+    
+    text-overflow:ellipsis; 
+    overflow:hidden;
+}
+
+aside .aside_list .parent_nav:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+
+aside .aside_list .parent_nav i:last-child {
+    float: right;
+}
+
+/* Side navigator list child lists*/
+aside .aside_list .child_nav {
+    display: none;
+}
+
+aside .aside_list .child_nav li a {
+    font-size: 12x;
+    color: #fff;
+    text-decoration: none;
+
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20%;
+    padding-right: 10%;
+    
+    text-overflow:ellipsis; 
+    overflow:hidden;
+	white-space:nowrap; 
+}
+
+aside .aside_list .child_nav li a:hover {
+    background-color: #333;
+    cursor: pointer;
+}
