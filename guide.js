@@ -36,7 +36,7 @@ function drop(ev) {
 }
 
 
-/** Drag & Drop
+/** Get Location
  * 
 */
 var text = document.getElementById("get_location_text");
@@ -164,11 +164,11 @@ function click_get() {
  /** SSE (Server sent event)
   * 
   */
-  if(typeof(EventSource)!=="undefined") {
-      var source=new EventSource("demo_sse.php");
-      source.onmessage=function(event) {
-          document.getElementById("sse_result").innerHTML+=event.data + "<br>";
-      };
-  } else {
-      document.getElementById("sse_result").innerHTML="Sorry, your brower does not support server-sent event...";
-  }
+//   if(typeof(EventSource)!=="undefined") {
+//       var source=new EventSource("demo_sse.php");
+//       source.onmessage=function(event) {
+//           document.getElementById("sse_result").innerHTML+=event.data + "<br>";
+//       };
+//   } else {
+//       document.getElementById("sse_result").innerHTML="Sorry, your brower does not support server-sent event...";
+//   }
