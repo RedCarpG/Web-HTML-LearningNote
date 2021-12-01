@@ -19,7 +19,7 @@
         <meta charset="utf-8" />
         <meta name="description" content="A HTML Tutorial" />
         <meta name="keywords" content="HTML,CSS,XML,JavaScript" /> <!-- Key words for seaching engines -->
-        <meta http-equiv="refresh" content="30" />      <!-- Refresh the page every 30 seconds-->
+        <meta http-equiv="refresh" content="60" />      <!-- Refresh the page every 60 seconds-->
         <meta name="viewport" content="width=device-width, 
                                        initial-scale=1.0, 
                                        maximum-scale=1.0, 
@@ -28,34 +28,38 @@
 
         <!-- <link /> for Link information -->
         <link rel="stylesheet" type="text/css" href="guide.css" />
-        <link rel="stylesheet" type="text/css" href="aside_nav.css" />
 
         <!-- <style></style> for adding Style -->
         <style type="text/css"> </style>
 
         <!-- <script></script> for adding JavaScript code -->
         <script src="guide.js"> </script> 
-        <script src="aside_nav.js" defer="defer"> </script> 
+
         <!-- <noscript></noscript> is used for browsers which does not support JavaScript code -->
-        <noscript>Sorry the browser does not support JS </noscript>
+        <noscript> If you see this messenge, it means that your browser does not support JS </noscript>
 
     </head>
 
     <!-- <body></body> for Main Body structure to be seen -->
     <body>
         
-        <!-- Header -->
-        <header>
-            <h1> HTML Guide Book </h1>
-        </header>
+        <!-- This is a header by <h1></h1> -->
+        <!-- Use style="" to specify a different style -->
+        <h1 style="text-align: center;"> HTML Guide Book </h1>
 
-        <!-- Main body -->
-        <article>
+        <!-- This is a paragraph by <p></p> -->
+        <p style="text-align: center;"> 
+            This guide book is my learning progress note as a beginner to html/css/js <br/>
+            This note is only made by basic and easy html/css/js elements and codes <br/>
+            Refer to the raw .html/.css/.js code for more explanations and documentations. 
+        </p>
+
+        <!-- <div></div> makes a div block of group of elements -->
+        <div>
 
             <!-- HTML Elements: -->
-            <h2> HTML Elements </h2>
+            <h2> 1. HTML Elements </h2>
             
-            <!-- <div></div> makes a div block of group of elements -->
             <div>
 
                 <!-- Titles : <h1></h1> <h2></h2> <h3></h3> ... <h6></h6>
@@ -215,7 +219,8 @@
             </div>
 
             <!-- HTML5 Elements: -->
-            <h2> HTML5 Elements </h2>
+            <h2> 2. HTML5 Elements </h2>
+            <p> In this block, the examples are used together with JS code. </p>
             <div id="div_html5_elements">
 
                 <!-- Video player : <video></video> 
@@ -466,6 +471,7 @@
             </div>
 
             <!-- Formats: -->
+            <h2> 3. Formats </h2>
             <div class="formats">
                 <details>
                 <summary class="example_title">Formats</summary>
@@ -525,6 +531,7 @@
             </div>
 
             <!-- Entities: -->
+            <h2> 4. Entities </h2>
             <div class="entities">
                 <details>
                 <summary class="example_title">Entities</summary>
@@ -536,53 +543,8 @@
                 </details>
 
             </div>
-        </article>
-        
-        <!-- Side navigator -->
-        <aside class="aside"> 
-            <!-- Side Title -->
-            <div class="aside_title">
-                Menu   
-            </div>
-            
-            <!-- Side List --> 
-            <ul class="aside_list">
-                <li class="aside_list_item">
-                    <div class="parent_nav">
-                        <i></i>
-                        <span> HTML Elements </span> 
-                        <i> > </i>
-                    </div>  
-                    <ul class="child_nav">
-                        <li> <a href=""> · Title</a> </li>
-                        <li> <a href=""> · Paragraph</a> </li>
-                        <li> <a href=""> · Archor </a> </li>
-                        <li> <a href=""> · Break </a> </li> 
-                        <li> <a href=""> · Image </a> </li> 
-                        <li> <a href=""> · Table </a> </li> 
-                        <li> <a href=""> · List </a> </li> 
-                        <li> <a href=""> · Form </a> </li> 
-                        <li> <a href=""> · Inner Frame </a> </li> 
-                        <li> <a href=""> · Span </a> </li> 
-                        <li> <a href=""> · Split Line </a> </li> 
-                    </ul> 
-                </li>
-                <li class="aside_list_item">
-                    <div class="parent_nav">
-                        <i></i>
-                        <span> HTML5 Elements </span> 
-                        <i> > </i>
-                    </div>
-                    <ul class="child_nav">
-                        <li> <a href=""> · Title</a> </li>
-                        <li> <a href=""> · Paragraph</a> </li>
-                        <li> <a href=""> · Archor </a> </li>
-                        <li> <a href=""> · Break </a> </li> 
-                    </ul>
-                </li>
-            </ul>
-                
-        </aside>
+        </div>
+
     </body>
 
 </html>
