@@ -1,4 +1,4 @@
-# web_frontend-learning_guide
+# Web-HTML-LearningNote
 
 This repo is a record of my learning progress and a guide for begginers new to `html`/`css`/`js`.
 
