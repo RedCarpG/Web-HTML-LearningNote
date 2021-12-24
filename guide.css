@@ -7,58 +7,315 @@
 /* This is an annotation in CSS, it will not be considered as code
  */
 
-/* Structures */
 
-body {
-    
-    /** Defines Background for body block */
-    background-attachment: fixed;
-    background-image: url(data/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover 100%;
-    background-position-x: center;
+@import url("./css/elements.css"); 
 
-
-    object-fit: cover;
-    color: antiquewhite;
-}
-
-/* Basic elements */
-
-table
-{
-    border-collapse: collapse;
-}
-table,th, td
-{
-    border: 1px solid black;
-}
-td
-{
-    padding: 15px;
-}
-th
-{
-    text-align: center;
-    font-size: 20px;
-}
-
-
+ 
 /* This changes styles of elementes which are in "example" class */
 div.example {
 
     /* Box */
-    padding: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    line-height: 15px;
+    padding: 2%;
+    margin: 0 5%;
 
     /* Text align */
     text-align: left;
+    color: rgb(41, 41, 41);
     
     /* Border radius */
-    border-radius: 25px;
+    border-radius: 10px;
     
     /** Background color */
-    background-color: rgba(215, 40, 40, 0.4);
+    background-image: linear-gradient(to bottom right, #7ec6bc, #ebe717);;
+    background-color: rgb(100, 100, 100);
 }
+
+body {
+    color: antiquewhite;
+    background-color: rgb(41, 41, 41);
+}
+
+/** Background Attributes
+{
+    background:bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
+    
+    background-color: ;
+    background-image: none;
+    background-position: ;
+    background-size: ;
+    background-repeat: ;
+    background-origin: ;
+    background-clip: ;
+    background-attachment: fixed|local|scroll|inherit|initial|unset;
+}
+*/
+
+/** Text Attributes
+
+{
+    color: ;
+    direction: ;
+    letter-spacing: ;
+    line-height: ;
+    text-align: ;
+    text-decoration: ;
+    text-indent: ;
+    text-shadow: ;
+    text-transform: ;
+    unicode-bidi: ;
+    vertical-align: ;
+    white-space: ;
+    word-spacing: ;
+}
+*/
+
+/** Fonts Attributes
+{
+    font: font-style font-variant font-weight font-size/line-height font-family;
+    
+    font-style: ;
+    font-variant: ;
+    font-weight: ;
+    font-size: ;
+    font-family: ;
+}
+*/
+
+/** List Attributes
+{
+    list-style: list-style-type list-style-position list-style-image;
+    list-style-type: ;
+    list-style-position: ;
+    list-style-image: ;
+}
+*/
+
+/** Border Attributes
+{
+    border-collapse: ;
+
+    border: border-width border-style border-color;
+    border-style: ;
+    border-width: ;
+    border-color: ;
+
+    border-bottom: border-bottom-width border-bottom-style border-bottom-color;
+    border-bottom-width: ;
+    border-bottom-style: ;
+    border-bottom-color: ;
+
+    border-left: border-left-width border-left-style border-left-color;
+    border-left-width: ;
+    border-left-style: ;
+    border-left-color: ;
+
+    border-right: border-right-width border-right-style border-right-color;
+    border-right-width: ;
+    border-right-style: ;
+    border-right-color: ;
+
+    border-top: border-top-width border-top-style border-top-color;
+    border-top-width: ;
+    border-top-style: ;
+    border-top-color: ;
+    
+    ----- CSS3 :
+
+    border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;
+    border-top-left-radius: ;
+    border-top-right-radius: ;
+    border-bottom-right-radius: ;
+    border-bottom-left-radius: ;
+
+    border-image:  border-image-source border-image-slice border-image-width border-image-outset border-image-repeat;
+    border-image-source: ;
+    border-image-slice: ;
+    border-image-width: ;
+    border-image-outset: ;
+    border-image-repeat: ;    
+
+    box-shadow: box-shadow: h-shadow v-shadow blur spread color inset;
+    ...
+}
+*/
+
+/** Outline Attributes
+{
+    outline: outline-color outline-style outline-width;
+    outline-width: ;
+    outline-style: ;
+    outline-color: ;
+    outline-offset: ;
+}
+*/
+
+/** Margin Attributes
+    [auto | length | % | inherit]
+{
+    margin: margin-top margin-right margin-bottom margin-left;
+    
+    margin-top: ;
+    margin-right: ;
+    margin-bottom: ;
+    margin-left: ;
+
+    [auto | length | % | inherit]
+}
+*/
+
+/** Padding Attributes
+    [auto | length | % | inherit]
+{
+    padding: padding-top padding-right padding-bottom padding-left;
+    
+    padding-top: ;
+    padding-right: ;
+    padding-bottom: ;
+    padding-left: ;
+
+}
+*/
+
+/** Dimension Attributes
+    [auto | length | % | inherit]
+{
+    height: ;
+    width: ;
+    max-height: ;
+    max-width: ;
+    min-height: ;
+    min-width: ;
+    
+}
+*/
+
+/** Display Attributes
+{
+    display: [none | block | inline | ...];
+    
+    visibility: [collapse | hidden | visible | ...];
+}
+*/
+
+/** Position Attributes
+{
+    position: [static | relative | fixed | absolute | sticky | ...];
+
+    z-index: ;
+
+    clip: ;
+    cursor: ;
+
+    overflow: [visible | hidden | scroll | auto | inherit];
+    overflow-x: ;
+    overflow-y: ;
+}
+*/
+
+/** Float Attributes
+{
+    float: [left | right | none | ...];
+
+    clear: [both | left | right | none | ...];
+}
+*/
+
+/** Selector
+
+#id_name
+{
+    "This block selects every element which 'id_name' id "
+}
+
+p
+{
+    "This block selects every <p></p> element"
+}
+.marked
+{
+    "This block selects every element with 'marked' class "
+}
+.marked p
+{
+    "This block selects every <p></p> element inside every element with class='marked' "
+}
+p.marked
+{
+    "This block selects every <p></p> element with 'marked' class "
+}
+
+div p
+{
+    "This block selects every <p></p> element inside a <div></div> element"
+}
+
+div>p
+{
+    "This block selects every direct child <p></p> element inside a <div></div> element"
+}
+
+div+p
+{
+    "This block selects each first sibling <p></p> element after a <div></div> element"
+}
+
+div+p
+{
+    "This block selects every sibling <p></p> element after a <div></div> element"
+}
+*/
+
+/** Pseudo-class / Pseudo-element
+
+selector:pseudo-class {property:value;}
+
+*/
+
+/** Media Type
+
+@media [all | screen | print | handheld | projection | tty | tv | aural | braille | embossed]
+{
+    ...
+}
+
+*/
+
+/** Attribute selector
+
+- select elements with attribute "attr"
+
+[attr]
+{
+    ...
+}
+
+- select <p></p> elements with attribute "attr"
+
+p[attr]
+{
+    ...
+}
+
+- select elements with attribute "attr" is "test"; e.g. <p attr="test"></p>
+[attr=test] 
+{ 
+    ... 
+}
+
+- select elements with attribute "attr" including a separate word "test"; e.g. <p attr="example test"></p>
+[attr~=test] 
+
+- select elements with attribute "attr" including a "test" string in the word; e.g. <p attr="ttttestttt"></p>
+[attr*=test] 
+
+- select elements with attribute "attr" starting with a separate "test" word or can be seperated by '-'; e.g. <p attr="test"></p> or <p attr="test-t"></p>
+[attr|=test] 
+
+- select elements with attribute "attr" starting with a "test" string; e.g. <p attr="testtsts"></p>
+[attr^=test] 
+
+- select elements with attribute "attr" ending with a "test" string; e.g. <p attr="tsstsseqtest"></p>
+[attr$=test] 
+*/
+
+

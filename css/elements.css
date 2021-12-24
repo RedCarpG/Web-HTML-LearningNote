@@ -1,0 +1,260 @@
+
+/*  elements.css
+
+----------------------------------------
+            Common Elements
+----------------------------------------
+*/
+
+/** ---------- Page body ---------- */
+body {
+    /* Clear margin and padding in order to fill the full page */
+    margin: 0;
+    padding: 0;
+
+    /* Set bg image */
+    background-image: url(data/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover 100%;
+    background-position-x: center;
+
+    /* Reset Counter */
+    counter-reset: head1;
+      
+}
+
+/** ---------- Head Titles ---------- */
+h1::before {
+    counter-increment: head1;
+    content: counter(head1) ". ";
+}
+h1 {
+    /* Reset Head2 Counter */
+    counter-reset: head2;
+}
+
+h2::before {
+    counter-increment: head2;
+    content: counter(head1) "." counter(head2) ". ";
+    counter-reset: head3;
+}
+h2 {
+    /* Reset Head3 Counter */
+    counter-reset: head3;
+}
+
+h3::before {
+    counter-increment: head3;
+    content: counter(head1) "." counter(head2) "." counter(head3) ". ";
+}
+
+h3 {
+    padding-left: 10px;
+}
+
+/* ---------- List ---------- */
+ol {
+    counter-reset: orderlist;
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+ol li::before {
+    counter-increment: orderlist;
+    content: counters(orderlist,".") " ";
+}
+
+li {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+  
+/* ---------- Tables ---------- */
+table
+{
+    margin: 2% 0;
+    padding: 10px;
+    border-radius: 10px;
+
+    color: black;
+
+    border-collapse: collapse;
+    background-color: #f2f2f2;
+}
+
+th, td
+{
+    border: 1px solid rgb(70, 70, 70);
+}
+
+td
+{
+    padding: 15px;
+}
+
+th
+{
+    background-color: #a3a3a3;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/* ---------- Forms ---------- 
+Form and inputs, select, textarea, etc.
+*/
+
+form {
+    margin: 2% 0;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+  
+    padding: 2%;
+    
+    color: black;
+}
+  
+/** Text inputs */
+input,
+select,
+textarea
+{
+    cursor: pointer;
+    padding: 12px 20px;
+    margin: 8px 0;
+
+    display: inline-block;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    min-width: 5%;
+    
+    font-size: 16px;
+}
+
+input:focus
+{
+    border: 1px solid #ccc;
+    background-color: rgb(230, 230, 230);
+}
+
+input[type=submit], 
+input[type=button], 
+input[type=reset],
+button
+{
+    padding: 14px 20px;
+    margin: 8px 0;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: #4CAF50;
+    color: white;
+
+    font-size: 16px;
+    text-transform: capitalize;
+
+    cursor: pointer;
+
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+input[type=submit]:hover, 
+input[type=button]:hover, 
+input[type=reset]:hover,
+button:hover
+{
+    background-color: #45a049;
+}
+
+input[type=color] {
+    padding: 2px;
+}
+
+input[type=checkbox],
+input[type=radio]
+{
+    margin: 7px 5px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+fieldset {
+    padding: 15px 0px;
+    margin: 15px 0;
+}
+
+legend {
+    padding: 7px;
+}
+
+input[type=range] {
+    padding: 0;
+    margin: 2px 10px;
+}
+
+/** ---------- Link ----------
+*/
+
+a
+{
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+	text-decoration:none;
+
+	display: inline-block;
+	/* font-weight:bold; */
+
+	color:#FFFFFF;
+    min-width: 20px;
+    min-height: 15px;
+
+	text-align: center;
+
+	padding: 4px 10px;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+a:link 
+{
+	background-color:#98bf21;
+}
+
+a:visited 
+{
+	background-color:#6e8a19;
+}
+
+a:hover, a:active
+{
+	background-color:#cadd91;
+	color:#5f7913;
+}
+
+a:active {
+    border: 1px solid black;
+}
+
+
+/** ---------- Link ----------
+*/
+
+iframe {
+
+
+    min-width: 200px;
+    min-height: 100px;
+    
+    margin: 4px;
+    border-radius: 5px;
+}
